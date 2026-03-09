@@ -1,0 +1,39 @@
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+
+# Notebook and editor artifacts
+.ipynb_checkpoints/
+.vscode/
+.venv/
+.DS_Store
+
+# Logs
+*.log
+research_experiments.log
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+paper/
+compile_paper.sh
+
+# Local benchmark data and outputs
+data/
+results/

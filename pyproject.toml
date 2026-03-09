@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cyber_investment"
+version = "0.1.0"
+description = "Power-system-informed cybersecurity investment optimization for power-grid control networks"
+authors = [{name = "Daniel Commey"}]
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.21",
+    "scipy>=1.7",
+    "networkx>=2.6",
+    "pandas>=1.3",
+    "matplotlib>=3.7",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src", "src.*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+addopts = "-v --cov=src"
+pythonpath = ["."]
