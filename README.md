@@ -12,8 +12,6 @@ This repository contains the code for a Stackelberg cybersecurity investment mod
 - regression tests in `tests`
 - packaging metadata for local installation and reuse
 
-Large benchmark files, generated results, and manuscript sources are intentionally excluded from the public repository view. They are created or maintained locally as needed.
-
 ## Core components
 
 - `src/power_grid/matpower.py` — MATPOWER parser and case container
@@ -51,23 +49,13 @@ If no case path is provided, the script downloads the IEEE 118-bus benchmark loc
 python src/scripts/run_full_experiments.py
 ```
 
-Missing PGLib benchmark cases are downloaded automatically into a local ignored `data/` directory. Experiment JSON outputs are written to a local ignored `results/` directory.
+Required PGLib benchmark cases are downloaded automatically when needed.
 
 ### Run tests
 
 ```bash
 pytest
 ```
-
-## Repository policy
-
-The public GitHub repository is code-focused. The following directories are intentionally not tracked:
-
-- `paper/`
-- `data/`
-- `results/`
-
-This keeps the repository lightweight while preserving full local reproducibility.
 
 ## License
 
